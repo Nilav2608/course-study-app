@@ -71,7 +71,8 @@
             app:cardCornerRadius="15dp"
             android:layout_marginTop="156dp"
             android:backgroundTint="@color/semidark"
-            android:elevation="20dp"
+            app:cardElevation="50dp"
+            app:cardMaxElevation="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" >
@@ -280,6 +281,8 @@
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/semidark"
             app:cardCornerRadius="25dp"
+            app:cardElevation="50dp"
+            app:cardMaxElevation="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
