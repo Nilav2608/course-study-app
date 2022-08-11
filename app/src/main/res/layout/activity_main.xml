@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imageBlue"
+            android:layout_width="412dp"
+            android:layout_height="204dp"
+            android:src="@drawable/bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="72dp"
+            android:text="Hello,Martin!"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Let's Start Learning"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:layout_width="59dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/avatar"
+            app:layout_constraintEnd_toEndOf="@+id/imageBlue"
+            app:layout_constraintHorizontal_bias="0.872"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardViewProgress"
+            android:layout_width="335dp"
+            android:layout_height="96dp"
+            android:outlineSpotShadowColor="@color/white"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="156dp"
+            android:backgroundTint="@color/semidark"
+            android:elevation="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:text="Learned Today"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="12dp"
+                android:textColor="#B8B8D2"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16sp"
+                android:paddingTop="28dp"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="46min"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="84sp"
+                android:paddingTop="28dp"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="/60min"
+                android:textColor="#B8B8D2" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:paddingTop="12dp"
+                android:paddingRight="12dp"
+                android:textSize="12dp"
+                android:textColor="@color/blue"
+                android:text="My courses"
+                android:layout_height="wrap_content" />
+
+        </androidx.cardview.widget.CardView>
+
+        <HorizontalScrollView
+            android:id="@+id/HorizontalScroll"
+            android:layout_width="510dp"
+            android:scrollbars="none"
+            android:layout_height="154dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CardViewProgress">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView1"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:backgroundTint="#CEECFE"
+                    android:layout_width="253dp"
+                    android:layout_height="154dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/dark"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="What do youwant to learn?"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/GetStartedBtn"
+                        android:layout_width="85dp"
+                        android:text="Get Started"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="104dp"
+                        android:background="@drawable/orange_btn"
+                        android:layout_height="31dp" />
+
+                    <ImageView
+                        android:layout_width="104dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="16dp"
+
+                        android:layout_gravity="right"
+                        android:src="@drawable/illustration2" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:backgroundTint="#CEECFE"
+                    android:layout_width="253dp"
+                    android:layout_height="154dp" >
+
+
+                    <ImageView
+
+                        android:layout_width="132dp"
+                        android:layout_height="134dp"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+
+                        android:src="@drawable/illustration" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:backgroundTint="#CEECFE"
+                    android:layout_width="253dp"
+                    android:layout_height="154dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/dark"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="What do youwant to learn?"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/GetStartedBtn2"
+                        android:layout_width="85dp"
+                        android:text="Get Started"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="104dp"
+                        android:background="@drawable/orange_btn"
+                        android:layout_height="31dp" />
+
+                    <ImageView
+                        android:layout_width="104dp"
+                        android:layout_height="116dp"
+                        android:layout_marginTop="16dp"
+
+                        android:layout_gravity="right"
+                        android:src="@drawable/illustration2" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:backgroundTint="#CEECFE"
+                    android:layout_width="253dp"
+                    android:layout_height="154dp" >
+
+
+                    <ImageView
+
+                        android:layout_width="132dp"
+                        android:layout_height="134dp"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+
+                        android:src="@drawable/illustration" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Learning Plan"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HorizontalScroll" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="350dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/semidark"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <ProgressBar
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:backgroundTint="#707070"
+                android:layout_width="24dp"
+                android:layout_height="24dp" >
+
+            </ProgressBar>
+
+
+            <ProgressBar
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="66dp"
+                android:backgroundTint="#707070"
+                android:layout_width="24dp"
+                android:layout_height="24dp" >
+
+            </ProgressBar>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Packaging Design"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="66dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Product Design"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="more"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/blue"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="40/48"
+                android:layout_gravity="right"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:layout_marginRight="18dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="6/24"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_gravity="right"
+                android:layout_marginTop="66dp"
+                android:textColor="@color/white"
+                android:layout_marginRight="18dp"
+                android:layout_height="wrap_content" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="350dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#EFE0FF"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Meetup"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="38dp"
+                android:layout_marginLeft="24dp"
+                android:textColor="#440687"
+                android:textSize="24sp"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Off-line exchange of learning experiences"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="74dp"
+                android:layout_marginLeft="24dp"
+                android:textColor="#440687"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/group143"
+                android:layout_gravity="right"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView8"
+            android:layout_width="350dp"
+            android:layout_height="133dp"
+            android:backgroundTint="#CEECFE"
+            app:cardCornerRadius="25dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card2" >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="ProductDesign v1.0"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="38dp"
+                android:layout_marginLeft="24dp"
+                android:textColor="#440687"
+                android:textSize="20sp"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="94dp"
+                android:text="BESTSELLER"
+                android:background="@drawable/yellow_btn"
+                android:textSize="12sp"
+                android:layout_width="95dp"
+                android:layout_height="26dp" />
+
+
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="97dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="18dp"
+                android:src="@drawable/illustration2" />
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
+
+
+
